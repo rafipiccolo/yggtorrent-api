@@ -4,11 +4,11 @@ var jar = request.jar();
 request.defaults({followAllRedirects: true});
 
 class Ygg {
-    constructor(host, searchhost, username, password) {
-        this.host = host;
-        this.searchhost = searchhost;
-        this.username = username;
-        this.password = password;
+    constructor(config) {
+        this.host = config.host;
+        this.searchhost = config.searchhost;
+        this.username = config.username;
+        this.password = config.password;
     }
 
     login(callback) {
@@ -84,7 +84,7 @@ class Ygg {
                 results.push({
                     // line: $(tr).text(),
                     url: $(tr).find('#torrent_name').attr('href'),
-                    name: $(tr).find('#torrent_name').text(),
+                    name: $(tr).find('#torrent_name').text().trim(),
                     size: $($(tr).find('td')[5]).text(),
                     downloadurl: this.host + '/engine/download_torrent?id=' + $(tr).find('#get_nfo').attr('target'),
                 });

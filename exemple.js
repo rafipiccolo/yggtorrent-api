@@ -10,7 +10,7 @@ config = {
 }
 */
 
-var ygg = new Yggtorrent(config.host, config.searchhost, config.username, config.password);
+var ygg = new Yggtorrent(config);
 
 ygg.login(err => {
     if (err) throw new Error('error while login ' + err.message);

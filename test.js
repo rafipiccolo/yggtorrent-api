@@ -1,7 +1,7 @@
 var Yggtorrent = require('./index.js');
 var config = require('./config.js');
 
-var ygg = new Yggtorrent(config.host, config.searchhost, config.username, config.password);
+var ygg = new Yggtorrent(config);
 
 var assert = require('assert');
 describe('login', function() {
