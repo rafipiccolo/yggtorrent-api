@@ -1,0 +1,23 @@
+{
+  "name": "yggtorrent-api",
+  "version": "1.0.0",
+  "description": "yggtorrent scrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafipiccolo/yggtorrent-api.git"
+  },
+  "author": "Raphael Piccolo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafipiccolo/yggtorrent-api/issues"
+  },
+  "homepage": "https://github.com/rafipiccolo/yggtorrent-api#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0"
+  }
+}
