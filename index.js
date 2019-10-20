@@ -102,7 +102,7 @@ class Ygg {
                     url: $(tr).find('#torrent_name').attr('href'),
                     name: $(tr).find('#torrent_name').text().trim(),
                     size: $($(tr).find('td')[5]).text(),
-                    downloadurl: this.host + '/engine/download_torrent?id=' + $(tr).find('#get_nfo').attr('target'),
+                    downloadurl: this.searchhost + '/engine/download_torrent?id=' + $(tr).find('#get_nfo').attr('target'),
                 });
             })
 
