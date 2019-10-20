@@ -26,7 +26,11 @@ class Ygg {
             jar: jar
         }, (err, response, body) => {
             if (err) return callback(err);
-            if (response.statusCode/100 >= 4) return callback(new Error('Bad status code : '+response.statusCode+'. Bad username/password ?'));
+            if (response.statusCode / 100 >= 4) {
+                var error = new Error('Bad status code : '+response.statusCode+'. Bad username/password ?')
+                error.body = body;
+                return callback(error);
+            }
 
             callback(err, body);
         });
@@ -43,7 +47,11 @@ class Ygg {
             jar: jar
         }, (err, response, body) => {
             if (err) return callback(err);
-            if (response.statusCode / 100 >= 4) return callback(new Error('Bad status code : ' + response.statusCode +'\n'+ body));
+            if (response.statusCode / 100 >= 4) {
+                var error = new Error('Bad status code : ' + response.statusCode);
+                error.body = body;
+                return callback(error);
+            }
 
             try {
                 body = JSON.parse(body);
@@ -68,14 +76,22 @@ class Ygg {
     search(name, callback) {
         request({
             method: 'GET',
-            url: this.searchhost + '/engine/search?name='+name+'&do=search',
+            url: this.searchhost + '/engine/search',
+            qs: {
+                name: name,
+                do: 'search',
+            },
             headers: {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
             },
             jar: jar
         }, (err, response, body) => {
             if (err) return callback(err);
-            if (response.statusCode / 100 >= 4) return callback(new Error('Bad status code : ' + response.statusCode));
+            if (response.statusCode / 100 >= 4) {
+                var error = new Error('Bad status code : ' + response.statusCode)
+                error.body = body;
+                return callback(error);
+            }
 
             var $ = cheerio.load(body);
 
