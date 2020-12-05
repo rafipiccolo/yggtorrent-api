@@ -27,7 +27,7 @@ class Ygg {
         }, (err, response, body) => {
             if (err) return callback(err);
             if (response.statusCode / 100 >= 4) {
-                var error = new Error('Bad status code : '+response.statusCode+'. Bad username/password ?')
+                var error = new Error('Bad status code while login : '+response.statusCode+'. Bad username/password ?')
                 error.body = body;
                 return callback(error);
             }
@@ -44,20 +44,16 @@ class Ygg {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
                 'x-requested-with': 'XMLHttpRequest',
             },
-            jar: jar
+            jar: jar,
+            json: true,
         }, (err, response, body) => {
             if (err) return callback(err);
             if (response.statusCode / 100 >= 4) {
-                var error = new Error('Bad status code : ' + response.statusCode);
+                var error = new Error('Bad status code getting ratio : ' + response.statusCode);
                 error.body = body;
                 return callback(error);
             }
 
-            try {
-                body = JSON.parse(body);
-            } catch (e) {
-                callback(e);
-            }
             body = body.html;
             
             // console.log(body);
@@ -88,7 +84,7 @@ class Ygg {
         }, (err, response, body) => {
             if (err) return callback(err);
             if (response.statusCode / 100 >= 4) {
-                var error = new Error('Bad status code : ' + response.statusCode)
+                var error = new Error('Bad status code while searching : ' + response.statusCode)
                 error.body = body;
                 return callback(error);
             }

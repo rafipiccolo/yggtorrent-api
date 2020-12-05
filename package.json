@@ -1,6 +1,6 @@
 {
   "name": "yggtorrent-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "yggtorrent scrapper",
   "main": "index.js",
   "scripts": {

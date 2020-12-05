@@ -3,8 +3,8 @@ var config = require('./config.js');
 
 /*
 config = {
-    host: 'https://www3.yggtorrent.pe',
-    searchhost: 'https://www2.yggtorrent.pe',
+    ost: 'https://yggtorrent.si',
+    searchhost: 'https://www2.yggtorrent.si',
     username: 'xxx',
     password: 'xxx',
 }

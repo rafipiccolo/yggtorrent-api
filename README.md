@@ -17,8 +17,8 @@ See exemple file for details :
 ## constructor : specify host, login and password
 
     var ygg = new Yggtorrent({
-        host: 'https://www3.yggtorrent.pe',
-        searchhost: 'https://www2.yggtorrent.pe',
+        host: 'https://yggtorrent.si',
+        searchhost: 'https://www2.yggtorrent.si',
         username: 'xxx',
         password: 'xxx',
     });
