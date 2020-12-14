@@ -8,7 +8,7 @@ yggtorrent scrapper
 
 # Exemple
 
-See exemple file for details : 
+See exemple file for details :
 
 [exemple file](exemple.js)
 

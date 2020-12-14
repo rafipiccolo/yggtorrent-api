@@ -12,12 +12,12 @@ config = {
 
 var ygg = new Yggtorrent(config);
 
-ygg.login(err => {
+ygg.login((err) => {
     if (err) throw new Error('error while login ' + err.message);
 
     ygg.getRatio((err, data) => {
         if (err) throw new Error('error getting ratio ' + err.message);
-        
+
         console.log('data', data);
     });
 });

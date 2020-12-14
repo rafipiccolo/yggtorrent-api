@@ -4,8 +4,8 @@ var config = require('./config.js');
 var ygg = new Yggtorrent(config);
 
 var assert = require('assert');
-describe('login', function() {
-    it('should log in and get ratio', function(cb) {
+describe('login', function () {
+    it('should log in and get ratio', function (cb) {
         ygg.login((err) => {
             assert.ifError(err);
 
@@ -17,7 +17,7 @@ describe('login', function() {
         });
     });
 
-    it('should find torrents', function(cb) {
+    it('should find torrents', function (cb) {
         ygg.search('Chernobyl S01', (err, data) => {
             assert.ifError(err);
             cb();
