@@ -15,7 +15,7 @@ class Ygg {
         request(
             {
                 method: 'POST',
-                url: `${this.host  }/user/login`,
+                url: `${this.host}/user/login`,
                 headers: {
                     'user-agent':
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
@@ -30,7 +30,7 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code while login : ${  response.statusCode  }. Bad username/password ?`);
+                    var error = new Error(`Bad status code while login : ${response.statusCode}. Bad username/password ?`);
                     error.body = body;
                     return callback(error);
                 }
@@ -44,7 +44,7 @@ class Ygg {
         request(
             {
                 method: 'GET',
-                url: `${this.host  }/user/ajax_usermenu`,
+                url: `${this.host}/user/ajax_usermenu`,
                 headers: {
                     'user-agent':
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
@@ -56,7 +56,7 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code getting ratio : ${  response.statusCode}`);
+                    var error = new Error(`Bad status code getting ratio : ${response.statusCode}`);
                     error.body = body;
                     return callback(error);
                 }
@@ -81,7 +81,7 @@ class Ygg {
         request(
             {
                 method: 'GET',
-                url: `${this.searchhost  }/engine/search`,
+                url: `${this.searchhost}/engine/search`,
                 qs: {
                     name,
                     do: 'search',
@@ -95,7 +95,7 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code while searching : ${  response.statusCode}`);
+                    var error = new Error(`Bad status code while searching : ${response.statusCode}`);
                     error.body = body;
                     return callback(error);
                 }
@@ -109,7 +109,7 @@ class Ygg {
                         url: $(tr).find('#torrent_name').attr('href'),
                         name: $(tr).find('#torrent_name').text().trim(),
                         size: $($(tr).find('td')[5]).text(),
-                        downloadurl: `${this.searchhost  }/engine/download_torrent?id=${  $(tr).find('#get_nfo').attr('target')}`,
+                        downloadurl: `${this.searchhost}/engine/download_torrent?id=${$(tr).find('#get_nfo').attr('target')}`,
                     });
                 });
 
