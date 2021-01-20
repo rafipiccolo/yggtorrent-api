@@ -25,7 +25,7 @@ class Ygg {
                     id: this.username,
                     pass: this.password,
                 },
-                jar: jar,
+                jar,
             },
             (err, response, body) => {
                 if (err) return callback(err);
@@ -50,7 +50,7 @@ class Ygg {
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
                     'x-requested-with': 'XMLHttpRequest',
                 },
-                jar: jar,
+                jar,
                 json: true,
             },
             (err, response, body) => {
@@ -83,14 +83,14 @@ class Ygg {
                 method: 'GET',
                 url: this.searchhost + '/engine/search',
                 qs: {
-                    name: name,
+                    name,
                     do: 'search',
                 },
                 headers: {
                     'user-agent':
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
                 },
-                jar: jar,
+                jar,
             },
             (err, response, body) => {
                 if (err) return callback(err);

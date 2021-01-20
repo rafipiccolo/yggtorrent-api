@@ -12,6 +12,7 @@
         "no-empty": 0,
         "no-redeclare": 0,
         "no-useless-escape": 0,
-        "no-inner-declarations": 0
+        "no-inner-declarations": 0,
+        "object-shorthand": ["error", "properties"]
     }
 }
