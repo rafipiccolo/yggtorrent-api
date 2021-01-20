@@ -13,6 +13,8 @@
         "no-redeclare": 0,
         "no-useless-escape": 0,
         "no-inner-declarations": 0,
-        "object-shorthand": ["error", "properties"]
+        "object-shorthand": ["error", "properties"],
+        "prefer-template": "error",
+        "no-useless-concat": "error"
     }
 }
