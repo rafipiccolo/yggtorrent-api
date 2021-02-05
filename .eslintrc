@@ -15,6 +15,19 @@
         "no-inner-declarations": 0,
         "object-shorthand": ["error", "properties"],
         "prefer-template": "error",
-        "no-useless-concat": "error"
+        "no-useless-concat": "error",
+        "strict": "error",
+        "no-div-regex": "error",
+        "no-constructor-return": "error",
+        "no-caller": "error",
+        "max-classes-per-file": "error",
+        "default-param-last": "error",
+        "default-case-last": "error",
+        "default-case": "error",
+        "array-callback-return": "error",
+        "no-unsafe-optional-chaining": "error",
+        "no-unreachable-loop": "error",
+        "no-template-curly-in-string": "error",
+        "no-loss-of-precision": "error"
     }
 }
