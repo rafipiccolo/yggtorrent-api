@@ -1,5 +1,3 @@
-'use strict';
-
 var Yggtorrent = require('./index.js');
 var config = require('./config.js');
 

@@ -12,7 +12,12 @@
         "no-floating-decimal": "error",
         "no-extra-label": "error",
         "no-extra-bind": "error",
-        "no-extend-native": ["error", { "exceptions": ["Object"] }],
+        "no-extend-native": [
+            "error",
+            {
+                "exceptions": ["Object"]
+            }
+        ],
         "no-eval": "error",
         "no-eq-null": "error",
         "no-else-return": "error",
@@ -25,7 +30,6 @@
         "object-shorthand": ["error", "properties"],
         "prefer-template": "error",
         "no-useless-concat": "error",
-        "strict": "error",
         "no-div-regex": "error",
         "no-constructor-return": "error",
         "no-caller": "error",
@@ -38,5 +42,6 @@
         "no-unreachable-loop": "error",
         "no-template-curly-in-string": "error",
         "no-loss-of-precision": "error"
-    }
+    },
+    "parser": "babel-eslint"
 }
