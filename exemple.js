@@ -1,5 +1,5 @@
-var Yggtorrent = require('./index.js');
-var config = require('./config.js');
+let Yggtorrent = require('./index.js');
+let config = require('./config.js');
 
 /*
 config = {
@@ -10,7 +10,7 @@ config = {
 }
 */
 
-var ygg = new Yggtorrent(config);
+let ygg = new Yggtorrent(config);
 
 ygg.login((err) => {
     if (err) throw new Error(`error while login ${err.message}`);

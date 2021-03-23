@@ -1,6 +1,6 @@
-var request = require('request');
-var cheerio = require('cheerio');
-var jar = request.jar();
+let request = require('request');
+let cheerio = require('cheerio');
+let jar = request.jar();
 request.defaults({ followAllRedirects: true });
 
 class Ygg {
@@ -30,7 +30,7 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code while login : ${response.statusCode}. Bad username/password ?`);
+                    let error = new Error(`Bad status code while login : ${response.statusCode}. Bad username/password ?`);
                     error.body = body;
                     return callback(error);
                 }
@@ -56,7 +56,7 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code getting ratio : ${response.statusCode}`);
+                    let error = new Error(`Bad status code getting ratio : ${response.statusCode}`);
                     error.body = body;
                     return callback(error);
                 }
@@ -64,9 +64,9 @@ class Ygg {
                 body = body.html;
 
                 // console.log(body);
-                var $ = cheerio.load(body);
-                var ratio = body.match(/Ratio : ([0-9\.]+)/);
-                var results = {
+                let $ = cheerio.load(body);
+                let ratio = body.match(/Ratio : ([0-9\.]+)/);
+                let results = {
                     upload: $('.ico_upload').parent().text(),
                     download: $('.ico_download').parent().text(),
                     ratio: ratio[1],
@@ -95,14 +95,14 @@ class Ygg {
             (err, response, body) => {
                 if (err) return callback(err);
                 if (response.statusCode / 100 >= 4) {
-                    var error = new Error(`Bad status code while searching : ${response.statusCode}`);
+                    let error = new Error(`Bad status code while searching : ${response.statusCode}`);
                     error.body = body;
                     return callback(error);
                 }
 
-                var $ = cheerio.load(body);
+                let $ = cheerio.load(body);
 
-                var results = [];
+                let results = [];
                 $('.table-responsive.results tbody tr').each((i, tr) => {
                     results.push({
                         // line: $(tr).text(),

@@ -26,7 +26,7 @@
         "no-empty": 0,
         "no-redeclare": 0,
         "no-useless-escape": 0,
-        "no-inner-declarations": 0,
+        "no-var": "error",
         "object-shorthand": ["error", "properties"],
         "prefer-template": "error",
         "no-useless-concat": "error",

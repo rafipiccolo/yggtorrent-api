@@ -1,9 +1,9 @@
-var Yggtorrent = require('./index.js');
-var config = require('./config.js');
+let Yggtorrent = require('./index.js');
+let config = require('./config.js');
 
-var ygg = new Yggtorrent(config);
+let ygg = new Yggtorrent(config);
 
-var assert = require('assert');
+let assert = require('assert');
 describe('login', function () {
     it('should log in and get ratio', function (cb) {
         ygg.login((err) => {
