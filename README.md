@@ -1,3 +1,11 @@
+# Issues
+
+vu que le site s'est doté de l'anti ddos de cloudflare il est difficile de l'aspirer avec une simple requete http.
+il existe cependant des solutions (simuler un navigateur / injecter des cookies valides).
+
+Si quelqu'un veut aider. Voici l'issue : [see issue](https://github.com/rafipiccolo/yggtorrent-api/issues/3)
+
+
 # Install
 
     npm install yggtorrent-api

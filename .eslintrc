@@ -10,7 +10,7 @@
         "no-undef-init": "error",
         "no-label-var": "error",
         "init-declarations": ["error", "always"],
-        "wrap-iife": "error",
+        "wrap-iife": ["error", "inside"],
         "yoda": "error",
         "vars-on-top": "error",
         "radix": ["error", "as-needed"],
