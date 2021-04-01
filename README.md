@@ -5,7 +5,6 @@ il existe cependant des solutions (simuler un navigateur / injecter des cookies 
 
 Si quelqu'un veut aider. Voici l'issue : [see issue](https://github.com/rafipiccolo/yggtorrent-api/issues/3)
 
-
 # Install
 
     npm install yggtorrent-api
