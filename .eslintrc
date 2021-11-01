@@ -74,5 +74,8 @@
         "no-template-curly-in-string": "error",
         "no-loss-of-precision": "error"
     },
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false
+    }
 }

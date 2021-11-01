@@ -17,12 +17,12 @@
     },
     "homepage": "https://github.com/rafipiccolo/yggtorrent-api#readme",
     "dependencies": {
+        "@babel/eslint-parser": "^7.16.0",
         "cheerio": "^1.0.0-rc.10",
         "request": "^2.88.2"
     },
     "devDependencies": {
-        "babel-eslint": "^10.1.0",
-        "mocha": "^9.1.1",
-        "prettier": "^2.3.2"
+        "mocha": "^9.1.3",
+        "prettier": "^2.4.1"
     }
 }
