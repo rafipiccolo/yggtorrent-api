@@ -19,3 +19,4 @@ Thumbs.db
 *.key
 *.p12
 *.p8
+.composer/
