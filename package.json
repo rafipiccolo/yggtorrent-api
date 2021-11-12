@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/rafipiccolo/yggtorrent-api#readme",
     "dependencies": {
-        "@babel/eslint-parser": "^7.16.0",
+        "@babel/eslint-parser": "^7.16.3",
         "cheerio": "^1.0.0-rc.10",
         "request": "^2.88.2"
     },
