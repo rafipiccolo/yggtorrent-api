@@ -1,5 +1,5 @@
-let request = require('request');
-let cheerio = require('cheerio');
+import request from 'request';
+import cheerio from 'cheerio';
 let jar = request.jar();
 request.defaults({ followAllRedirects: true });
 
@@ -119,4 +119,4 @@ class Ygg {
     }
 }
 
-module.exports = Ygg;
+export default Ygg;

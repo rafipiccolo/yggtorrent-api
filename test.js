@@ -1,5 +1,5 @@
-let Yggtorrent = require('./index.js');
-let config = require('./config.js');
+import Yggtorrent from './index.js';
+import config from './config.js';
 
 let ygg = new Yggtorrent(config);
 
