@@ -2,10 +2,11 @@
     "env": {
         "browser": true,
         "node": true,
-        "es2020": true,
+        "es2021": true,
         "mocha": true
     },
-    "extends": "eslint:recommended",
+    "plugins": ["sonarjs"],
+    "extends": ["eslint:recommended", "plugin:promise/recommended", "plugin:sonarjs/recommended", "plugin:node/recommended"],
     "rules": {
         "no-undef-init": "error",
         "no-label-var": "error",
@@ -72,7 +73,19 @@
         "no-unsafe-optional-chaining": "error",
         "no-unreachable-loop": "error",
         "no-template-curly-in-string": "error",
-        "no-loss-of-precision": "error"
+        "no-loss-of-precision": "error",
+        "sonarjs/cognitive-complexity": 0,
+        "sonarjs/no-nested-template-literals": 0,
+        "sonarjs/no-collapsible-if": 0,
+        "sonarjs/no-duplicate-string": 0,
+        "sonarjs/prefer-immediate-return": 0,
+        "sonarjs/no-identical-functions": 0,
+        "sonarjs/prefer-object-literal": 0,
+        "no-inner-declarations": 0,
+        "no-process-exit": 0,
+        "node/no-unpublished-import": 0,
+        "node/no-unsupported-features/es-syntax": 0,
+        "node/no-missing-import": 0
     },
     "parser": "@babel/eslint-parser",
     "parserOptions": {

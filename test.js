@@ -1,9 +1,9 @@
 import Yggtorrent from './index.js';
 import config from './config.js';
+import assert from 'assert';
 
 let ygg = new Yggtorrent(config);
 
-let assert = require('assert');
 describe('login', () => {
     it('should log in and get ratio', (cb) => {
         ygg.login((err) => {
