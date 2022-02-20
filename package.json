@@ -4,7 +4,8 @@
     "description": "yggtorrent scrapper",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -25,8 +26,10 @@
         "eslint": "^8.9.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-promise": "^6.0.0",
-        "eslint-plugin-sonarjs": "^0.11.0",
-        "mocha": "^9.2.0",
+        "eslint-plugin-sonarjs": "^0.12.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.4",
+        "mocha": "^9.2.1",
         "prettier": "^2.5.1"
     },
     "type": "module",

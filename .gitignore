@@ -20,3 +20,4 @@ Thumbs.db
 *.p12
 *.p8
 .composer/
+.php-cs-fixer.cache
