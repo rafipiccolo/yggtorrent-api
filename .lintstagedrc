@@ -2,5 +2,12 @@
     "*.js": [
         "eslint --fix",
         "prettier --write"
+    ],
+    "*.html.twig": [
+        "twig-cs-fixer lint --fix"
+    ],
+    "*.php": [
+        "myphpstan.js",
+        "php-cs-fixer fix"
     ]
 }
