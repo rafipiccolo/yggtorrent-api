@@ -3,11 +3,17 @@
         "eslint --fix",
         "prettier --write"
     ],
+    "*.css": [
+        "prettier --write"
+    ],
+    "*.jsx": [
+        "prettier --write"
+    ],
     "*.html.twig": [
         "twig-cs-fixer lint --fix"
     ],
     "*.php": [
         "myphpstan.js",
-        "php-cs-fixer fix"
+        "php-cs-fixer fix --config .php-cs-fixer.php"
     ]
 }
